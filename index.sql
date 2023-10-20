@@ -12,4 +12,9 @@ matricula int primary key,
 nome varchar(50),
 data_nascimento date
 );
-
+create table pedidos(
+id int primary key,
+cliente_id int,
+data_pedido date,
+foreign key (cliente_id) references clients(id)
+);
